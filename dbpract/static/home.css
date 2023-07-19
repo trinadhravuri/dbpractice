@@ -1,0 +1,67 @@
+
+.navbar{
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    width: 100%;
+    background-color: grey;
+    text-align: center;
+    justify-content: space-around;
+}
+
+.navhome{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: space-around;
+}
+.navhome li{
+    list-style: none;
+}
+.navhome li a{
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+    padding: 10px 10px;
+}
+.navhome li a:active,
+.navhome li a:hover{
+    color: white;
+}
+.users{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: space-around;
+}
+.users li{
+    list-style: none;
+
+}
+.users li a{
+    text-decoration: none;
+    font-size: 25px;
+    color:black;
+    padding: 10px 10px;
+}
+.users li a:active,
+.users li a:hover{
+    color:white;
+}
+.users li a:active,
+.users li a:hover i{
+    color:black;
+}
+.users li i{
+    color:white;
+    margin-right: 10px;
+}
+.users li i:active,
+.users li i:hover{
+    color: black;
+}
+.users li i:active,
+.users li i:hover a{
+    color: white;
+}
