@@ -1,0 +1,31 @@
+Models/DB fields
+### Listings
+id : int
+title: string
+address: string
+city: string
+Zipcode : string
+description: text
+price: Int
+bedrooms: int
+bathrooms:int
+garage: string
+sqft ;int
+list-date: date
+photo_main:string
+photo_1:string
+photo_2:string
+photo_3:string
+photo_4:string
+photo_5:string
+
+
+### CONTACT
+id:int
+user_id: Int
+Listing: Int
+Listing_id: int
+name: stringemail: email
+phone: string
+message:text
+contact_date:date

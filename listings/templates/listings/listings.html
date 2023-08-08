@@ -1,0 +1,59 @@
+{% extends 'home.html' %}
+{% load static %}
+
+{% block listing %}
+<style>
+    .listings{
+        position: relative;
+        top: 50px;
+        text-align: center;
+    }
+    .lists-ul{
+        display: flex;
+    }
+    .lists-ul li{
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        margin: 10px;
+    }
+    .lists-ul li .li-img{
+        height: 250px;
+        width: 250px;
+        border-radius: 5px;
+    }
+    .lists-ul li .li-img:active,
+    .lists-ul li .li-img:hover{
+        height: 255px;
+        width: 255px;
+    }
+    .lists-ul li .li-ti{
+        font-size: 28px;
+        text-decoration: none;
+        color: black;
+        padding-top: 10px;
+    }
+</style>
+<section class="listings">
+<h1>LISTINGS OF PROPERTIES</h1>
+<h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam neque velit ad nam non iure harum atque eveniet sit, expedita quibusdam enim distinctio provident voluptatum excepturi deserunt beatae culpa saepe!</h2>
+
+<section>
+<h1>Listings</h1>
+<div class="lists">
+    <ul class="lists-ul">
+        {% for list in lists %}
+        <li>
+            <a href=""><img class="li-img" src="{{list.photo_main.url}}" alt="No Image"></a>
+            <a class="li-ti" href="">{{list.title}}</a>
+            <h2>{{list.zipcode}}</h2>
+            <h1>{{list.price}}</h1>
+            <h3>{{list.description}}</h3>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+</section>
+</section>
+{% endblock %}
