@@ -2,6 +2,7 @@
 {% load static %}
 
 {% block listing %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
 <style>
     .listings{
         position: relative;
@@ -54,6 +55,43 @@
         {% endfor %}
     </ul>
 </div>
+</section>
+<section>
+    <nav aria-label="...">
+        {% if lists.has_other_pages %}
+        <ul class="pagination">
+          {% if lists.has_previous %}
+          <li class="page-item">
+            <a href="?page={{lists.previous_page_number}}" class="page-link">&laquo;</a>
+          </li>
+          {% else %}
+          <li class="page-item disabled">
+            <a class="page-link">&laquo;</a>
+          </li>
+          {% endif %}
+          {% for i in lists.paginator.page_range %}
+            {% if lists.number == i %}
+            <li class="page-item active">
+                <a class="page-link">{{i}}</a>
+            </li>
+            {% else %}
+            <li class="page-link">
+                <a href="?page={{i}}" class="page-link">{{i}}</a>
+            </li>
+            {% endif %}
+          {% endfor %}
+          {% if lists.has_next %}
+          <li class="page-item">
+            <a href="?page={{lists.next_page_number}}" class="page-link">&raquo;</a>
+          </li>
+          {% else %}
+          <li class="page-item disabled">
+            <a class="page-link">&raquo;</a>
+          </li>
+          {% endif %}
+        </ul>
+        {% endif %}
+      </nav>
 </section>
 </section>
 {% endblock %}
